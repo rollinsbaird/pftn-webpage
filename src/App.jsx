@@ -345,11 +345,11 @@ function App() {
 
   return (
     <>
-      <div>
+      {/* <div>
       <h2 className="logo" style={{fontSize: "4rem"}}>🕊️</h2>
-        {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
-      </div>
-      <h1>Mulitpy PFTN</h1>
+        <img src={viteLogo} className="logo" alt="Vite logo" />
+      </div> */}
+      <h1>Mulitpy PFTN 🕊️</h1>
       <div>
         <DropdownMenu
           selectedOption={pair}
