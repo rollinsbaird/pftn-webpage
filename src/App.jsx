@@ -5,6 +5,8 @@ import "./App.css";
 import DropdownMenu from "./components/DropdownMenu/DropdownMenu";
 import CountrySection from "./components/CountrySection/CountrySection";
 import calcWeek from "./assets/calcWeek";
+import PGSection from "./components/PGSection/PGSection";
+import OpeningSentence from "./components/OpeningSentence/OpeningSentence";
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -320,8 +322,15 @@ const Countries = [
   ["Sudan", "https://www.opendoors.org/en-US/persecution/countries/sudan/"],
 ];
 
+export class PG {
+  constructor(name, link) {
+    this.name = name;
+    this.link = link;
+  }
+}
+
 function App() {
-  const [pair, setPair] = useState("Nesha & Maggie");
+  const [pair, setPair] = useState(1);
   const [week, setWeek] = useState(calcWeek());
   // const [week, setWeek] = useState(calcWeek());
 
@@ -336,28 +345,49 @@ function App() {
         </a> */}
       </div>
       <h1>Mulitpy PFTN</h1>
-      {/* <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div> */}
+        <div>
+          <DropdownMenu
+            selectedOption={pair}
+            setSelectedOption={setPair}
+            Options={PairOptions}
+          />
+        </div>
       <div>
-        <DropdownMenu
-          selectedOption={pair}
-          setSelectedOption={setPair}
-          Options={PairOptions}
-        />
-        {/* <DropdownMenu
-          selectedOption={week}
-          setSelectedOption={setWeek}
-          Options={WeekOptions}
-        /> */}
+        <OpeningSentence />
+        <h2>PSALM 126</h2>
+        <p style={{textAlign: "left"}}>
+          When the Lord overturned the captivity of Zion,
+          <br />
+          then were we like those who dream.
+          <br />
+          Then was our mouth filled with laughter
+          <br />
+          and our tongue with shouts of joy. Then they said among the nations,
+          <br />
+          "The Lord has done great things for them."
+          <br />
+          Indeed, the Lord has done great things for us already,
+          <br />
+          whereof we rejoice.
+          <br />
+          Overturn our captivity, O Lord,
+          <br />
+          as when streams refresh the deserts of the south.
+          <br />
+          Those who sow in tears
+          <br />
+          shall reap with songs of joy.
+          <br />
+          He who goes on his way weeping and bears good seed
+          <br />
+          shall doubtless come again with joy, and bring his sheaves with him.
+        </p>
       </div>
       <div>
-
+        <PGSection
+          pg1={new PG(PGNames[pair - 1][week - 1], PGLinks[pair - 1][week - 1])}
+          pg2={new PG(PGNames[pair - 1][week], PGLinks[pair - 1][week])}
+        />
         <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
       </div>
       <p className="read-the-docs">
