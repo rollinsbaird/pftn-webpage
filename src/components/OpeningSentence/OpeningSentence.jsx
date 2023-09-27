@@ -3,7 +3,7 @@ import openings from "./openingSentences.json"
 
 function OpeningSentence() {
   return <div>
-    <h2>Let us pray</h2>
+    <h2>Worship</h2>
     <p>{openings.sentences[0].verse}</p>
     <p>{openings.sentences[0].ref}</p>
   </div>;

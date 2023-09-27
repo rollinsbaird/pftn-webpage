@@ -7,6 +7,7 @@ import CountrySection from "./components/CountrySection/CountrySection";
 import calcWeek from "./assets/calcWeek";
 import PGSection from "./components/PGSection/PGSection";
 import OpeningSentence from "./components/OpeningSentence/OpeningSentence";
+import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -322,6 +323,15 @@ const Countries = [
   ["Sudan", "https://www.opendoors.org/en-US/persecution/countries/sudan/"],
 ];
 
+const Friends = [
+  ["Will & Lilly", "Beth & Jason"],
+  ["Rod & Tori", "Chris & Monica"],
+  ["Erica Patrick", "Robby & Chrissy"],
+  ["McKayla", "Dave & Rose"],
+  ["Sarah & Javier", "Katie"],
+  ["Brooke & Aaron", "Scott Belmore"],
+];
+
 export class PG {
   constructor(name, link) {
     this.name = name;
@@ -332,30 +342,25 @@ export class PG {
 function App() {
   const [pair, setPair] = useState(1);
   const [week, setWeek] = useState(calcWeek());
-  // const [week, setWeek] = useState(calcWeek());
 
   return (
     <>
       <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        {/* <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a> */}
+      <h2 className="logo" style={{fontSize: "4rem"}}>🕊️</h2>
+        {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
       </div>
       <h1>Mulitpy PFTN</h1>
-        <div>
-          <DropdownMenu
-            selectedOption={pair}
-            setSelectedOption={setPair}
-            Options={PairOptions}
-          />
-        </div>
+      <div>
+        <DropdownMenu
+          selectedOption={pair}
+          setSelectedOption={setPair}
+          Options={PairOptions}
+        />
+      </div>
       <div>
         <OpeningSentence />
-        <h2>PSALM 126</h2>
-        <p style={{textAlign: "left"}}>
+        <h3>PSALM 126</h3>
+        <p style={{ textAlign: "left" }}>
           When the Lord overturned the captivity of Zion,
           <br />
           then were we like those who dream.
@@ -384,14 +389,40 @@ function App() {
         </p>
       </div>
       <div>
+        <h2>World</h2>
         <PGSection
           pg1={new PG(PGNames[pair - 1][week - 1], PGLinks[pair - 1][week - 1])}
           pg2={new PG(PGNames[pair - 1][week], PGLinks[pair - 1][week])}
         />
         <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
+        <h3>Adittional Resources</h3>
+        <a href="https://globe.stratus.earth/globe-explorer/">Stratus Index</a>
+        <br />
+        <a href="https://operationworld.org/">Operation World Prayer</a>
+        <br />
+        <a href="https://prayercast.com/">Prayercast</a>
+        <br />
+        <a href="https://radical.net/podcasts/pray-the-word/">
+          Pray The Word Podcasts Archive - Radical
+        </a>
+        <FriendsMenu
+          friend1={Friends[pair - 1][0]}
+          friend2={Friends[pair - 1][1]}
+        />
+        <h2>Witness</h2>
+        <h3>Lift up those who don't yet know Jesus.</h3>
+        <p>
+          Father, we ask that you would fill us with hospitality and love.
+          Please give us genuine friendships with international students and
+          help us to welcome them well. Would you give us opportunities to
+          proclaim the good news about Jesus to international students and give
+          those students faith to trust you. Help us to inconvenience ourselves
+          to display your love to international students just as your Son gave
+          up everything to serve us. <strong>Amen.</strong>
+        </p>
       </div>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        Made by Rollins with 💙
       </p>
     </>
   );
