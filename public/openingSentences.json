@@ -1,23 +1,40 @@
 {
-	"sentences": [
-
-{
-       "verse":"Jesus spoke to them, saying, “I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life.”","ref":"JOHN 8:12"},
-{
-       "verse":"Lord, I have loved the habitation of your house and the place where your honor dwells.","ref":"PSALM 26:8"},
-{
-       "verse":"The Lord is in his holy temple; let all the earth keep silence before him.","ref":"HABAKKUK 2:20"},
-{
-       "verse":"O send out your light and your truth, that they may lead me, and bring me to your holy hill, and to your dwelling.","ref":"PSALM 43:3"},
-{
-       "verse":"The hour is coming, and is now here, when the true worshipers will worship the Father in spirit and truth, for the Father is seeking such people to worship him.","ref":"JOHN 4:23"},
-{
-       "verse":"Grace to you and peace from God our Father and the Lord Jesus Christ.","ref":"PHILIPPIANS 1:2"},
-{
-       "verse":"I was glad when they said unto me, “We will go into the house of the Lord.”","ref":"PSALM 122:1"},
-{
-       "verse":"Let the words of my mouth and the meditation of my heart be always acceptable in your sight, O Lord, my rock and my redeemer.","ref":"PSALM 19:14"},
-{
-       "verse":"O worship the Lord in the beauty of holiness; let the whole earth stand in awe of him.","ref":"PSALM 96:9"}
-]
+  "sentences": [
+    {
+      "verse": "Jesus spoke to them, saying, “I am the light of the world. Whoever follows me will not walk in darkness, but will have the light of life.”",
+      "ref": "JOHN 8:12"
+    },
+    {
+      "verse": "Lord, I have loved the habitation of your house and the place where your honor dwells.",
+      "ref": "PSALM 26:8"
+    },
+    {
+      "verse": "The Lord is in his holy temple; let all the earth keep silence before him.",
+      "ref": "HABAKKUK 2:20"
+    },
+    {
+      "verse": "O send out your light and your truth, that they may lead me, and bring me to your holy hill, and to your dwelling.",
+      "ref": "PSALM 43:3"
+    },
+    {
+      "verse": "The hour is coming, and is now here, when the true worshipers will worship the Father in spirit and truth, for the Father is seeking such people to worship him.",
+      "ref": "JOHN 4:23"
+    },
+    {
+      "verse": "Grace to you and peace from God our Father and the Lord Jesus Christ.",
+      "ref": "PHILIPPIANS 1:2"
+    },
+    {
+      "verse": "I was glad when they said unto me, “We will go into the house of the Lord.”",
+      "ref": "PSALM 122:1"
+    },
+    {
+      "verse": "Let the words of my mouth and the meditation of my heart be always acceptable in your sight, O Lord, my rock and my redeemer.",
+      "ref": "PSALM 19:14"
+    },
+    {
+      "verse": "O worship the Lord in the beauty of holiness; let the whole earth stand in awe of him.",
+      "ref": "PSALM 96:9"
+    }
+  ]
 }
