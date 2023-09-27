@@ -11,8 +11,8 @@ import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
-  { value: 2, label: "Mimi & Anna" },
-  { value: 3, label: "Nesha & Maggie" },
+  { value: 2, label: "Riley & Anna" },
+  { value: 3, label: "Mimi & McKenzie" },
   { value: 4, label: "Thom & Brenner" },
   { value: 5, label: "Jo, Clay, & Blake Swafford" },
   { value: 6, label: "Rollins & Blake Kelly" },
