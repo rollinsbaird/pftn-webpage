@@ -6,7 +6,7 @@ import DropdownMenu from "./components/DropdownMenu/DropdownMenu";
 import CountrySection from "./components/CountrySection/CountrySection";
 import calcWeek from "./assets/calcWeek";
 import PGSection from "./components/PGSection/PGSection";
-import OpeningSentence from "./components/OpeningSentence/OpeningSentence";
+import DisplayVerse from "./components/DisplayVerse/DisplayVerse";
 import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
 
 const PairOptions = [
@@ -358,7 +358,8 @@ function App() {
         />
       </div>
       <div>
-        <OpeningSentence />
+        <h2>Worship</h2>
+        <DisplayVerse isOpening={true} />
         <h3>PSALM 126</h3>
         <p style={{ textAlign: "left" }}>
           When the Lord overturned the captivity of Zion,
@@ -420,10 +421,9 @@ function App() {
           to display your love to international students just as your Son gave
           up everything to serve us. <strong>Amen.</strong>
         </p>
+        <DisplayVerse isOpening={false} />
       </div>
-      <p className="read-the-docs">
-        Made by Rollins with 💙
-      </p>
+      <p className="read-the-docs">Made by Rollins with 💙</p>
     </>
   );
 }

@@ -1,4 +1,6 @@
 // import React from 'react';
+import PropTypes from 'prop-types';
+
 
 function CountrySection({ Name, Link }) {
   return (
@@ -7,5 +9,10 @@ function CountrySection({ Name, Link }) {
     </h3>
   );
 }
+
+CountrySection.propTypes = {
+  Name: PropTypes.string,
+  Link: PropTypes.string
+};
 
 export default CountrySection;
