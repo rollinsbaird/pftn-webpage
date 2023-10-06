@@ -349,7 +349,7 @@ function App() {
       <h2 className="logo" style={{fontSize: "4rem"}}>🕊️</h2>
         <img src={viteLogo} className="logo" alt="Vite logo" />
       </div> */}
-      <h1>Mulitpy PFTN 🕊️</h1>
+      <h1>Multiply PFTN 🕊️</h1>
       <div>
         <DropdownMenu
           selectedOption={pair}
