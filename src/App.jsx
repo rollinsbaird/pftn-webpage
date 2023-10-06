@@ -396,7 +396,7 @@ function App() {
           pg2={new PG(PGNames[pair - 1][week], PGLinks[pair - 1][week])}
         />
         <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
-        <h3>Adittional Resources</h3>
+        <h3>Additional Resources</h3>
         <a href="https://globe.stratus.earth/globe-explorer/">Stratus Index</a>
         <br />
         <a href="https://operationworld.org/">Operation World Prayer</a>
