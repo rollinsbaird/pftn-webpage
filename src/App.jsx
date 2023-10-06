@@ -392,8 +392,8 @@ function App() {
       <div>
         <h2>World</h2>
         <PGSection
-          pg1={new PG(PGNames[pair - 1][week - 1], PGLinks[pair - 1][week - 1])}
-          pg2={new PG(PGNames[pair - 1][week], PGLinks[pair - 1][week])}
+          pg1={new PG(PGNames[pair - 1][week*2 - 1], PGLinks[pair - 1][week*2 - 1])}
+          pg2={new PG(PGNames[pair - 1][week*2], PGLinks[pair - 1][week*2])}
         />
         <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
         <h3>Additional Resources</h3>
