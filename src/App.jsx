@@ -343,6 +343,8 @@ function App() {
   const [pair, setPair] = useState(1);
   const [week, setWeek] = useState(calcWeek());
 
+  console.log(week);
+
   return (
     <>
       {/* <div>
@@ -392,10 +394,23 @@ function App() {
       <div>
         <h2>World</h2>
         <PGSection
-          pg1={new PG(PGNames[pair - 1][week - 1], PGLinks[pair - 1][week - 1])}
-          pg2={new PG(PGNames[pair - 1][week], PGLinks[pair - 1][week])}
+          pg1={
+            new PG(
+              PGNames[pair - 1][(week - 1) * 2],
+              PGLinks[pair - 1][(week - 1) * 2]
+            )
+          }
+          pg2={
+            new PG(
+              PGNames[pair - 1][(week - 1) * 2 + 1],
+              PGLinks[pair - 1][(week - 1) * 2] + 1
+            )
+          }
         />
-        <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
+        <CountrySection
+          Name={Countries[week - 1][0]}
+          Link={Countries[week - 1][1]}
+        />
         <h3>Adittional Resources</h3>
         <a href="https://globe.stratus.earth/globe-explorer/">Stratus Index</a>
         <br />
