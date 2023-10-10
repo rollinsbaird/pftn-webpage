@@ -339,13 +339,13 @@ export class PG {
 }
 
 function App() {
-  // const [cookies, setCookie] = useCookies(["pair"]);
-  const [pair, setPair] = useState(1);
+  const [cookies, setCookie] = useCookies(["pair"]);
+  const [pair, setPair] = useState(cookies.pair);
   const [week, setWeek] = useState(calcWeek());
 
-  // useEffect(() => {
-  //   setCookie("pair", pair);
-  // }, [pair, setCookie]);
+  useEffect(() => {
+    setCookie("pair", pair);
+  }, [pair, setCookie]);
 
   // function handleCookie() {
   //   if (typeof myVar === "undefined") {
@@ -364,6 +364,7 @@ function App() {
           setSelectedOption={setPair}
           Options={PairOptions}
         />
+        
       </div>
       <div>
         <h2>Worship</h2>
@@ -399,38 +400,84 @@ function App() {
       </div>
       <div>
         <h2>World</h2>
-        <PGSection
-          pg1={
-            new PG(
-              PGNames[pair - 1][(week - 1) * 2],
-              PGLinks[pair - 1][(week - 1) * 2]
-            )
-          }
-          pg2={
-            new PG(
-              PGNames[pair - 1][(week - 1) * 2 + 1],
-              PGLinks[pair - 1][(week - 1) * 2 + 1]
-            )
-          }
-        />
-        <CountrySection
-          Name={Countries[week - 1][0]}
-          Link={Countries[week - 1][1]}
-        />
-        <h3>Adittional Resources</h3>
-        <a href="https://globe.stratus.earth/globe-explorer/">Stratus Index</a>
-        <br />
-        <a href="https://operationworld.org/">Operation World Prayer</a>
-        <br />
-        <a href="https://prayercast.com/">Prayercast</a>
-        <br />
-        <a href="https://radical.net/podcasts/pray-the-word/">
-          Pray The Word Podcasts Archive - Radical
-        </a>
-        <FriendsMenu
-          friend1={Friends[pair - 1][0]}
-          friend2={Friends[pair - 1][1]}
-        />
+        (typeof pair === "undefined") ?{" "}
+        {
+          <>
+            <PGSection
+              pg1={
+                new PG(
+                  PGNames[1 - 1][(week - 1) * 2],
+                  PGLinks[1 - 1][(week - 1) * 2]
+                )
+              }
+              pg2={
+                new PG(
+                  PGNames[1 - 1][(week - 1) * 2 + 1],
+                  PGLinks[1 - 1][(week - 1) * 2 + 1]
+                )
+              }
+            />
+            <CountrySection
+              Name={Countries[week - 1][0]}
+              Link={Countries[week - 1][1]}
+            />
+            <h3>Adittional Resources</h3>
+            <a href="https://globe.stratus.earth/globe-explorer/">
+              Stratus Index
+            </a>
+            <br />
+            <a href="https://operationworld.org/">Operation World Prayer</a>
+            <br />
+            <a href="https://prayercast.com/">Prayercast</a>
+            <br />
+            <a href="https://radical.net/podcasts/pray-the-word/">
+              Pray The Word Podcasts Archive - Radical
+            </a>
+            <FriendsMenu
+              friend1={Friends[1 - 1][0]}
+              friend2={Friends[1 - 1][1]}
+            />
+          </>
+        }{" "}
+        :{" "}
+        {
+          <>
+            <PGSection
+              pg1={
+                new PG(
+                  PGNames[pair - 1][(week - 1) * 2],
+                  PGLinks[pair - 1][(week - 1) * 2]
+                )
+              }
+              pg2={
+                new PG(
+                  PGNames[pair - 1][(week - 1) * 2 + 1],
+                  PGLinks[pair - 1][(week - 1) * 2 + 1]
+                )
+              }
+            />
+            <CountrySection
+              Name={Countries[week - 1][0]}
+              Link={Countries[week - 1][1]}
+            />
+            <h3>Adittional Resources</h3>
+            <a href="https://globe.stratus.earth/globe-explorer/">
+              Stratus Index
+            </a>
+            <br />
+            <a href="https://operationworld.org/">Operation World Prayer</a>
+            <br />
+            <a href="https://prayercast.com/">Prayercast</a>
+            <br />
+            <a href="https://radical.net/podcasts/pray-the-word/">
+              Pray The Word Podcasts Archive - Radical
+            </a>
+            <FriendsMenu
+              friend1={Friends[pair - 1][0]}
+              friend2={Friends[pair - 1][1]}
+            />
+          </>
+        }
         <h2>Witness</h2>
         <h3>Lift up those who don't yet know Jesus.</h3>
         <p>
