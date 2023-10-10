@@ -10,8 +10,8 @@ import { useCookies } from 'react-cookie';
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
-  { value: 2, label: "Mimi & Anna" },
-  { value: 3, label: "Nesha & Maggie" },
+  { value: 2, label: "Riley & Anna" },
+  { value: 3, label: "Mimi & McKenzie" },
   { value: 4, label: "Thom & Brenner" },
   { value: 5, label: "Jo, Clay, & Blake Swafford" },
   { value: 6, label: "Rollins & Blake Kelly" },
@@ -358,7 +358,7 @@ function App() {
       <h2 className="logo" style={{fontSize: "4rem"}}>🕊️</h2>
         <img src={viteLogo} className="logo" alt="Vite logo" />
       </div> */}
-      <h1>Mulitpy PFTN 🕊️</h1>
+      <h1>Multiply PFTN 🕊️</h1>
       <div>
         <DropdownMenu
           selectedOption={pair}
