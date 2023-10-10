@@ -364,7 +364,7 @@ function App() {
           setSelectedOption={setPair}
           Options={PairOptions}
         />
-        
+
       </div>
       <div>
         <h2>Worship</h2>
@@ -400,8 +400,8 @@ function App() {
       </div>
       <div>
         <h2>World</h2>
-        (typeof pair === "undefined") ?{" "}
-        {
+        {(typeof pair === "undefined") ?
+        
           <>
             <PGSection
               pg1={
@@ -438,9 +438,9 @@ function App() {
               friend2={Friends[1 - 1][1]}
             />
           </>
-        }{" "}
-        :{" "}
-        {
+        
+        :
+        
           <>
             <PGSection
               pg1={
