@@ -9,7 +9,6 @@ function DropdownMenu({ Options, selectedOption, setSelectedOption }) {
           value={selectedOption}
           onChange={(event) => {
             setSelectedOption(event.target.value);
-            // handleCookie();
           }}>
           {Options.map((item) => (
             <option key={item.value} value={item.value}>

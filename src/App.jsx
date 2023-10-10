@@ -339,21 +339,21 @@ export class PG {
 }
 
 function App() {
-  const [cookies, setCookie] = useCookies(["pair"]);
-  const [pair, setPair] = useState(handleCookie());
+  // const [cookies, setCookie] = useCookies(["pair"]);
+  const [pair, setPair] = useState(1);
   const [week, setWeek] = useState(calcWeek());
 
-  useEffect(() => {
-    setCookie("pair", pair);
-  }, [pair, setCookie]);
+  // useEffect(() => {
+  //   setCookie("pair", pair);
+  // }, [pair, setCookie]);
 
-  function handleCookie() {
-    if (typeof myVar === "undefined") {
-      return cookies.pair;
-    } else {
-      return "1";
-    }
-  }
+  // function handleCookie() {
+  //   if (typeof myVar === "undefined") {
+  //     return cookies.pair;
+  //   } else {
+  //     return "1";
+  //   }
+  // }
 
   return (
     <>
