@@ -1,6 +1,4 @@
-import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useEffect, useState } from "react";
 import "./App.css";
 import DropdownMenu from "./components/DropdownMenu/DropdownMenu";
 import CountrySection from "./components/CountrySection/CountrySection";
@@ -8,6 +6,7 @@ import calcWeek from "./assets/calcWeek";
 import PGSection from "./components/PGSection/PGSection";
 import DisplayVerse from "./components/DisplayVerse/DisplayVerse";
 import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
+import { useCookies } from 'react-cookie';
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -340,8 +339,18 @@ export class PG {
 }
 
 function App() {
-  const [pair, setPair] = useState(1);
+  const [cookies, setCookie] = useCookies(['pair']);
+  const [pair, setPair] = useState(cookies.pair);
   const [week, setWeek] = useState(calcWeek());
+
+  useEffect(() => {
+    setCookie('pair', pair);
+  }, [pair, setCookie]);
+
+  // setCookie('pair', 1); 
+
+  console.log(week, cookies);
+  // console.log(week);
 
   return (
     <>
@@ -392,11 +401,24 @@ function App() {
       <div>
         <h2>World</h2>
         <PGSection
-          pg1={new PG(PGNames[pair - 1][week*2 - 1], PGLinks[pair - 1][week*2 - 1])}
-          pg2={new PG(PGNames[pair - 1][week*2], PGLinks[pair - 1][week*2])}
+          pg1={
+            new PG(
+              PGNames[pair - 1][(week - 1) * 2],
+              PGLinks[pair - 1][(week - 1) * 2]
+            )
+          }
+          pg2={
+            new PG(
+              PGNames[pair - 1][(week - 1) * 2 + 1],
+              PGLinks[pair - 1][(week - 1) * 2] + 1
+            )
+          }
         />
-        <CountrySection Name={Countries[week][0]} Link={Countries[week][1]} />
-        <h3>Additional Resources</h3>
+        <CountrySection
+          Name={Countries[week - 1][0]}
+          Link={Countries[week - 1][1]}
+        />
+        <h3>Adittional Resources</h3>
         <a href="https://globe.stratus.earth/globe-explorer/">Stratus Index</a>
         <br />
         <a href="https://operationworld.org/">Operation World Prayer</a>
