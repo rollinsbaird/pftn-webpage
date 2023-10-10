@@ -6,7 +6,7 @@ import calcWeek from "./assets/calcWeek";
 import PGSection from "./components/PGSection/PGSection";
 import DisplayVerse from "./components/DisplayVerse/DisplayVerse";
 import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -339,25 +339,24 @@ export class PG {
 }
 
 function App() {
-  const [cookies, setCookie] = useCookies(['pair']);
-  const [pair, setPair] = useState(cookies.pair);
+  const [cookies, setCookie] = useCookies(["pair"]);
+  const [pair, setPair] = useState(handleCookie());
   const [week, setWeek] = useState(calcWeek());
 
   useEffect(() => {
-    setCookie('pair', pair);
+    setCookie("pair", pair);
   }, [pair, setCookie]);
 
-  // setCookie('pair', 1); 
-
-  console.log(week, cookies);
-  // console.log(week);
+  function handleCookie() {
+    if (typeof myVar === "undefined") {
+      return cookies.pair;
+    } else {
+      return "1";
+    }
+  }
 
   return (
     <>
-      {/* <div>
-      <h2 className="logo" style={{fontSize: "4rem"}}>🕊️</h2>
-        <img src={viteLogo} className="logo" alt="Vite logo" />
-      </div> */}
       <h1>Multiply PFTN 🕊️</h1>
       <div>
         <DropdownMenu

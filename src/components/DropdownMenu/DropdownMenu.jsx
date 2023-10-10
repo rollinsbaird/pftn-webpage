@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 function DropdownMenu({ Options, selectedOption, setSelectedOption }) {
   return (
     <form>
@@ -7,6 +9,7 @@ function DropdownMenu({ Options, selectedOption, setSelectedOption }) {
           value={selectedOption}
           onChange={(event) => {
             setSelectedOption(event.target.value);
+            // handleCookie();
           }}>
           {Options.map((item) => (
             <option key={item.value} value={item.value}>
@@ -18,5 +21,11 @@ function DropdownMenu({ Options, selectedOption, setSelectedOption }) {
     </form>
   );
 }
+
+DropdownMenu.propTypes = {
+  Options: PropTypes.array,
+  selectedOption: PropTypes.any,
+  setSelectedOption: PropTypes.func
+};
 
 export default DropdownMenu;
