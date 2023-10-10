@@ -410,7 +410,7 @@ function App() {
           pg2={
             new PG(
               PGNames[pair - 1][(week - 1) * 2 + 1],
-              PGLinks[pair - 1][(week - 1) * 2] + 1
+              PGLinks[pair - 1][(week - 1) * 2 + 1]
             )
           }
         />
