@@ -7,6 +7,7 @@ import PGSection from "./components/PGSection/PGSection";
 import DisplayVerse from "./components/DisplayVerse/DisplayVerse";
 import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
 import { useCookies } from "react-cookie";
+import ShowWeek from "./components/ShowWeek/ShowWeek";
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -347,16 +348,8 @@ function App() {
     setCookie("pair", pair);
   }, [pair, setCookie]);
 
-  // function handleCookie() {
-  //   if (typeof myVar === "undefined") {
-  //     return cookies.pair;
-  //   } else {
-  //     return "1";
-  //   }
-  // }
-
   return (
-    <>
+    <div className="content-wrapper">
       <h1>Multiply PFTN 🕊️</h1>
       <div>
         <DropdownMenu
@@ -364,7 +357,7 @@ function App() {
           setSelectedOption={setPair}
           Options={PairOptions}
         />
-
+        <ShowWeek week={week} weekOptions={WeekOptions} />
       </div>
       <div>
         <h2>Worship</h2>
@@ -492,7 +485,7 @@ function App() {
         <DisplayVerse isOpening={false} />
       </div>
       <p className="read-the-docs">Made by Rollins with 💙</p>
-    </>
+    </div>
   );
 }
 
