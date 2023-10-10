@@ -1,6 +1,4 @@
-import { useState } from "react";
-// import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { useEffect, useState } from "react";
 import "./App.css";
 import DropdownMenu from "./components/DropdownMenu/DropdownMenu";
 import CountrySection from "./components/CountrySection/CountrySection";
@@ -8,6 +6,7 @@ import calcWeek from "./assets/calcWeek";
 import PGSection from "./components/PGSection/PGSection";
 import DisplayVerse from "./components/DisplayVerse/DisplayVerse";
 import FriendsMenu from "./components/FriendsMenu/FriendsMenu";
+import { useCookies } from 'react-cookie';
 
 const PairOptions = [
   { value: 1, label: "Nesha & Maggie" },
@@ -340,10 +339,18 @@ export class PG {
 }
 
 function App() {
-  const [pair, setPair] = useState(1);
+  const [cookies, setCookie] = useCookies(['pair']);
+  const [pair, setPair] = useState(cookies.pair);
   const [week, setWeek] = useState(calcWeek());
 
-  console.log(week);
+  useEffect(() => {
+    setCookie('pair', pair);
+  }, [pair, setCookie]);
+
+  // setCookie('pair', 1); 
+
+  console.log(week, cookies);
+  // console.log(week);
 
   return (
     <>
