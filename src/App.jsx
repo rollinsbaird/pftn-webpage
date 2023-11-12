@@ -357,7 +357,7 @@ function App() {
           setSelectedOption={setPair}
           Options={PairOptions}
         />
-        <ShowWeek week={week} weekOptions={WeekOptions} />
+        <ShowWeek week={week - 1} weekOptions={WeekOptions} />
       </div>
       <div>
         <h2>Worship</h2>
@@ -393,8 +393,7 @@ function App() {
       </div>
       <div>
         <h2>World</h2>
-        {(typeof pair === "undefined") ?
-        
+        {typeof pair === "undefined" ? (
           <>
             <PGSection
               pg1={
@@ -414,26 +413,28 @@ function App() {
               Name={Countries[week - 1][0]}
               Link={Countries[week - 1][1]}
             />
-            <h3>Adittional Resources</h3>
-            <a href="https://globe.stratus.earth/globe-explorer/">
-              Stratus Index
-            </a>
-            <br />
-            <a href="https://operationworld.org/">Operation World Prayer</a>
-            <br />
-            <a href="https://prayercast.com/">Prayercast</a>
-            <br />
-            <a href="https://radical.net/podcasts/pray-the-word/">
-              Pray The Word Podcasts Archive - Radical
-            </a>
+            <details>
+              <summary>Adittional Prayer Resources</summary>
+              <>
+                <a href="https://globe.stratus.earth/globe-explorer/">
+                  Stratus Index
+                </a>
+                <br />
+                <a href="https://operationworld.org/">Operation World Prayer</a>
+                <br />
+                <a href="https://prayercast.com/">Prayercast</a>
+                <br />
+                <a href="https://radical.net/podcasts/pray-the-word/">
+                  Pray The Word Podcasts Archive - Radical
+                </a>
+              </>
+            </details>
             <FriendsMenu
               friend1={Friends[1 - 1][0]}
               friend2={Friends[1 - 1][1]}
             />
           </>
-        
-        :
-        
+        ) : (
           <>
             <PGSection
               pg1={
@@ -453,24 +454,28 @@ function App() {
               Name={Countries[week - 1][0]}
               Link={Countries[week - 1][1]}
             />
-            <h3>Adittional Resources</h3>
-            <a href="https://globe.stratus.earth/globe-explorer/">
-              Stratus Index
-            </a>
-            <br />
-            <a href="https://operationworld.org/">Operation World Prayer</a>
-            <br />
-            <a href="https://prayercast.com/">Prayercast</a>
-            <br />
-            <a href="https://radical.net/podcasts/pray-the-word/">
-              Pray The Word Podcasts Archive - Radical
-            </a>
+            <details>
+              <summary>Adittional Prayer Resources</summary>
+              <>
+                <a href="https://globe.stratus.earth/globe-explorer/">
+                  Stratus Index
+                </a>
+                <br />
+                <a href="https://operationworld.org/">Operation World Prayer</a>
+                <br />
+                <a href="https://prayercast.com/">Prayercast</a>
+                <br />
+                <a href="https://radical.net/podcasts/pray-the-word/">
+                  Pray The Word Podcasts Archive - Radical
+                </a>
+              </>
+            </details>
             <FriendsMenu
               friend1={Friends[pair - 1][0]}
               friend2={Friends[pair - 1][1]}
             />
           </>
-        }
+        )}
         <h2>Witness</h2>
         <h3>Lift up those who don&apos;t yet know Jesus.</h3>
         <p>
