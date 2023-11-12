@@ -372,7 +372,7 @@ function App() {
           <br />
           and our tongue with shouts of joy. Then they said among the nations,
           <br />
-          "The Lord has done great things for them."
+          &quot;The Lord has done great things for them.&quot;
           <br />
           Indeed, the Lord has done great things for us already,
           <br />
@@ -472,7 +472,7 @@ function App() {
           </>
         }
         <h2>Witness</h2>
-        <h3>Lift up those who don't yet know Jesus.</h3>
+        <h3>Lift up those who don&apos;t yet know Jesus.</h3>
         <p>
           Father, we ask that you would fill us with hospitality and love.
           Please give us genuine friendships with international students and
