@@ -953,13 +953,24 @@ const Countries = [
   ["Mali", "https://www.opendoors.org/en-US/persecution/countries/mali/"],
 ];
 
-const Friends = [
+const FallFriends = [
   ["Will & Lilly", "Beth & Jason"],
   ["Rod & Tori", "Chris & Monica"],
   ["Erica Patrick", "Robby & Chrissy"],
   ["McKayla", "Dave & Rose"],
   ["Sarah & Javier", "Katie"],
   ["Brooke & Aaron", "Scott Belmore"],
+];
+
+const Friends = [
+  "the Woodalls and LeeLee",
+  "Hunter & Meghan and Allison & Drew",
+  "Peyton Alexander and Meg & Thomas",
+  "Rod & Tori and Ian & Nora",
+  "Erica Patrick",
+  "Chloe",
+  "Brett & Meghan",
+  "Bethany Derby",
 ];
 
 export class PG {
@@ -1066,8 +1077,7 @@ function App() {
               </>
             </details>
             <FriendsMenu
-              friend1={Friends[1 - 1][0]}
-              friend2={Friends[1 - 1][1]}
+              friend={Friends[0]}
             />
           </>
         ) : (
@@ -1112,10 +1122,9 @@ function App() {
                 </a>
               </>
             </details>
-            {/* <FriendsMenu
-              friend1={Friends[pair - 1][0]}
-              friend2={Friends[pair - 1][1]}
-            /> */}
+            <FriendsMenu
+              friend={Friends[pair - 1]}
+            />
           </>
         )}
         <h2>Witness</h2>

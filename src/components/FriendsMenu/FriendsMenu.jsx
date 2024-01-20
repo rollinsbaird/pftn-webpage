@@ -1,9 +1,11 @@
-function FriendsMenu({ friend1, friend2 }) {
+import PropTypes from 'prop-types';
+
+function FriendsMenu({ friend }) {
   return (
     <>
       <h2>Workers</h2>
       <h3>
-        Please lift up {friend1} and {friend2}.
+        Please lift up {friend}.
       </h3>
       <p>
         O God, you desire that all people be saved and come to knowledge of the
@@ -17,5 +19,9 @@ function FriendsMenu({ friend1, friend2 }) {
     </>
   );
 }
+
+FriendsMenu.propTypes = {
+  friend: PropTypes.string,
+};
 
 export default FriendsMenu;
