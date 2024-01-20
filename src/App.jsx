@@ -37,141 +37,6 @@ const WeekOptions = [
   { value: 14, label: "17 April" },
 ];
 
-// const PGNames = [
-//   [
-//     "Adi Dravida",
-//     "Arab, Moroccan",
-//     "Arab, Sudanese",
-//     "Azerbaijani, Azeri Turk",
-//     "Bengali Muslim Shaikh",
-//     "Dhobi (Hindu traditions)",
-//     "Han Chinese, Xiang",
-//     "Japanese",
-//     "Java Mancanegari",
-//     "Kashmiri (Muslim traditions)",
-//     "Koli of Gujarat",
-//     "Kurmi (Hindu traditions)",
-//     "Mahishya",
-//     "Mali (Hindu traditions)",
-//     "Oromo, Hararghe",
-//     "Rajput (Hindu traditions)",
-//     "Shaikh Siddiqi",
-//     "Sunda",
-//     "Thai, Isan",
-//     "Uzbek, Northern",
-//   ],
-//   [
-//     "Afghan, Tajik",
-//     "Arab, North Iraqi",
-//     "Arab, Tunisian",
-//     "Badhai (Hindu traditions)",
-//     "Bhil unspecified",
-//     "Dusadh (Hindu traditions)",
-//     "Hausa",
-//     "Jat (Hindu traditions)",
-//     "Java Pesisir Lor",
-//     "Kayastha (Hindu traditions)",
-//     "Korean",
-//     "Lohar (Hindu traditions)",
-//     "Mahratta Kunbi",
-//     "Mappila",
-//     "Pashtun",
-//     "Sayyid",
-//     "Shaikh unspecified",
-//     "Sylhet (Muslim traditions)",
-//     "Thai, Northern",
-//     "Vakkaliga unspecified",
-//   ],
-//   [
-//     "Algerian, Arabic-speaking",
-//     "Arab, Northern Yemeni",
-//     "Arab, Yemeni",
-//     "Bambara",
-//     "Brahmin unspecified",
-//     "Fulani, Nigerian",
-//     "Hausa",
-//     "Jat (Muslim traditions)",
-//     "Kahar (Hindu traditions)",
-//     "Kazakh",
-//     "Kumhar (Hindu traditions)",
-//     "Madiga (Hindu traditions)",
-//     "Mahratta unspecified",
-//     "Minangkabau",
-//     "Pashtun, Pathan",
-//     "Sayyid",
-//     "Somali",
-//     "Tajik",
-//     "Tujia",
-//     "Vanniyan",
-//   ],
-//   [
-//     "Ansari",
-//     "Arab, Saudi - Hijazi",
-//     "Arain (Muslim traditions)",
-//     "Bania unspecified",
-//     "Burmese",
-//     "Gond unspecified",
-//     "Hui",
-//     "Jat (Sikh traditions)",
-//     "Kanuri, Yerwa",
-//     "Khmer",
-//     "Kunbi (Hindu traditions)",
-//     "Madura",
-//     "Mala (Hindu traditions)",
-//     "Nai (Hindu traditions)",
-//     "Pashtun, Southern",
-//     "Shaikh",
-//     "Somali",
-//     "Teli (Hindu traditions)",
-//     "Turk",
-//     "Viswakarma unspecified",
-//   ],
-//   [
-//     "Arab, Iraqi",
-//     "Arab, Saudi - Najdi",
-//     "Azerbaijani",
-//     "Banjara (Hindu traditions)",
-//     "Chamar (Hindu traditions)",
-//     "Gujar (Hindu traditions)",
-//     "Ilavan",
-//     "Java Banyumasan",
-//     "Kapu unspecified",
-//     "Koiri (Hindu traditions)",
-//     "Kurd, Kurmanji",
-//     "Mahar (Buddhist traditions)",
-//     "Malay",
-//     "Nair",
-//     "Persian",
-//     "Shaikh Qureshi",
-//     "Sonar (Hindu traditions)",
-//     "Thai",
-//     "Uyghur",
-//     "Yadav (Hindu traditions)",
-//   ],
-//   [
-//     "Afghan, Tajik",
-//     "Arab, North Iraqi",
-//     "Arab, Tunisian",
-//     "Badhai (Hindu traditions)",
-//     "Bhil unspecified",
-//     "Dusadh (Hindu traditions)",
-//     "Hausa",
-//     "Jat (Hindu traditions)",
-//     "Java Pesisir Lor",
-//     "Kayastha (Hindu traditions)",
-//     "Korean",
-//     "Lohar (Hindu traditions)",
-//     "Mahratta Kunbi",
-//     "Mappila",
-//     "Pashtun",
-//     "Sayyid",
-//     "Shaikh unspecified",
-//     "Sylhet (Muslim traditions)",
-//     "Thai, Northern",
-//     "Vakkaliga unspecified",
-//   ],
-// ];
-
 const PeopNameInCountry = [
   "Adi Dravida",
   "Afghan, Tajik",
@@ -1059,141 +924,6 @@ const ROG3 = [
 
 const PGLinkBase = "https://joshuaproject.net/people_groups/";
 
-// const PGLinks = [
-//   [
-//     "https://joshuaproject.net/people_groups/16164/IN",
-//     "https://joshuaproject.net/people_groups/13819/MO",
-//     "https://joshuaproject.net/people_groups/15104/SU",
-//     "https://joshuaproject.net/people_groups/18859/IR",
-//     "https://joshuaproject.net/people_groups/18084/BG",
-//     "https://joshuaproject.net/people_groups/16709/IN",
-//     "https://joshuaproject.net/people_groups/18484/CH",
-//     "https://joshuaproject.net/people_groups/12322/JA",
-//     "https://joshuaproject.net/people_groups/19029/ID",
-//     "https://joshuaproject.net/people_groups/12558/IN",
-//     "https://joshuaproject.net/people_groups/21555/IN",
-//     "https://joshuaproject.net/people_groups/17334/IN",
-//     "https://joshuaproject.net/people_groups/17411/IN",
-//     "https://joshuaproject.net/people_groups/18786/IN",
-//     "https://joshuaproject.net/people_groups/12286/ET",
-//     "https://joshuaproject.net/people_groups/17928/IN",
-//     "https://joshuaproject.net/people_groups/21815/IN",
-//     "https://joshuaproject.net/people_groups/15121/ID",
-//     "https://joshuaproject.net/people_groups/15460/TH",
-//     "https://joshuaproject.net/people_groups/14039/UZ",
-//   ],
-//   [
-//     "https://joshuaproject.net/people_groups/14372/AF",
-//     "https://joshuaproject.net/people_groups/20327/IZ",
-//     "https://joshuaproject.net/people_groups/15641/TS",
-//     "https://joshuaproject.net/people_groups/16332/IN",
-//     "https://joshuaproject.net/people_groups/16414/IN",
-//     "https://joshuaproject.net/people_groups/16742/IN",
-//     "https://joshuaproject.net/people_groups/12070/NI",
-//     "https://joshuaproject.net/people_groups/12329/IN",
-//     "https://joshuaproject.net/people_groups/12334/ID",
-//     "https://joshuaproject.net/people_groups/17124/IN",
-//     "https://joshuaproject.net/people_groups/12795/KN",
-//     "https://joshuaproject.net/people_groups/17379/IN",
-//     "https://joshuaproject.net/people_groups/17599/IN",
-//     "https://joshuaproject.net/people_groups/17452/IN",
-//     "https://joshuaproject.net/people_groups/14256/PK",
-//     "https://joshuaproject.net/people_groups/18045/IN",
-//     "https://joshuaproject.net/people_groups/18084/IN",
-//     "https://joshuaproject.net/people_groups/22311/BG",
-//     "https://joshuaproject.net/people_groups/12666/TH",
-//     "https://joshuaproject.net/people_groups/18293/IN",
-//   ],
-//   [
-//     "https://joshuaproject.net/people_groups/10379/AG",
-//     "https://joshuaproject.net/people_groups/14715/YM",
-//     "https://joshuaproject.net/people_groups/15198/YM",
-//     "https://joshuaproject.net/people_groups/10617/ML",
-//     "https://joshuaproject.net/people_groups/16521/IN",
-//     "https://joshuaproject.net/people_groups/10949/NI",
-//     "https://joshuaproject.net/people_groups/12070/NG",
-//     "https://joshuaproject.net/people_groups/17571/PK",
-//     "https://joshuaproject.net/people_groups/17044/IN",
-//     "https://joshuaproject.net/people_groups/12599/KZ",
-//     "https://joshuaproject.net/people_groups/17316/IN",
-//     "https://joshuaproject.net/people_groups/17397/IN",
-//     "https://joshuaproject.net/people_groups/17554/IN",
-//     "https://joshuaproject.net/people_groups/13724/ID",
-//     "https://joshuaproject.net/people_groups/21537/IN",
-//     "https://joshuaproject.net/people_groups/18045/PK",
-//     "https://joshuaproject.net/people_groups/14983/SO",
-//     "https://joshuaproject.net/people_groups/15201/TI",
-//     "https://joshuaproject.net/people_groups/18702/CH",
-//     "https://joshuaproject.net/people_groups/18323/IN",
-//   ],
-//   [
-//     "https://joshuaproject.net/people_groups/16221/IN",
-//     "https://joshuaproject.net/people_groups/14784/SA",
-//     "https://joshuaproject.net/people_groups/16228/PK",
-//     "https://joshuaproject.net/people_groups/16318/IN",
-//     "https://joshuaproject.net/people_groups/11029/BM",
-//     "https://joshuaproject.net/people_groups/16855/IN",
-//     "https://joshuaproject.net/people_groups/12140/CH",
-//     "https://joshuaproject.net/people_groups/18777/IN",
-//     "https://joshuaproject.net/people_groups/12509/NI",
-//     "https://joshuaproject.net/people_groups/12662/CB",
-//     "https://joshuaproject.net/people_groups/17325/IN",
-//     "https://joshuaproject.net/people_groups/13199/ID",
-//     "https://joshuaproject.net/people_groups/17425/IN",
-//     "https://joshuaproject.net/people_groups/17745/IN",
-//     "https://joshuaproject.net/people_groups/14327/AF",
-//     "https://joshuaproject.net/people_groups/18084/PK",
-//     "https://joshuaproject.net/people_groups/14983/ET",
-//     "https://joshuaproject.net/people_groups/18229/IN",
-//     "https://joshuaproject.net/people_groups/18274/TU",
-//     "https://joshuaproject.net/people_groups/18314/IN",
-//   ],
-//   [
-//     "https://joshuaproject.net/people_groups/12247/IZ",
-//     "https://joshuaproject.net/people_groups/10759/SA",
-//     "https://joshuaproject.net/people_groups/10528/AJ",
-//     "https://joshuaproject.net/people_groups/16315/IN",
-//     "https://joshuaproject.net/people_groups/16561/IN",
-//     "https://joshuaproject.net/people_groups/16878/IN",
-//     "https://joshuaproject.net/people_groups/16965/IN",
-//     "https://joshuaproject.net/people_groups/12331/ID",
-//     "https://joshuaproject.net/people_groups/19597/IN",
-//     "https://joshuaproject.net/people_groups/17236/IN",
-//     "https://joshuaproject.net/people_groups/12877/TU",
-//     "https://joshuaproject.net/people_groups/17405/IN",
-//     "https://joshuaproject.net/people_groups/13437/MY",
-//     "https://joshuaproject.net/people_groups/17747/IN",
-//     "https://joshuaproject.net/people_groups/14371/IR",
-//     "https://joshuaproject.net/people_groups/21236/IN",
-//     "https://joshuaproject.net/people_groups/18150/IN",
-//     "https://joshuaproject.net/people_groups/11277/TH",
-//     "https://joshuaproject.net/people_groups/15755/CH",
-//     "https://joshuaproject.net/people_groups/16187/IN",
-//   ],
-//   [
-//     "https://joshuaproject.net/people_groups/14372/AF",
-//     "https://joshuaproject.net/people_groups/20327/IZ",
-//     "https://joshuaproject.net/people_groups/15641/TS",
-//     "https://joshuaproject.net/people_groups/16332/IN",
-//     "https://joshuaproject.net/people_groups/16414/IN",
-//     "https://joshuaproject.net/people_groups/16742/IN",
-//     "https://joshuaproject.net/people_groups/12070/NI",
-//     "https://joshuaproject.net/people_groups/12329/IN",
-//     "https://joshuaproject.net/people_groups/12334/ID",
-//     "https://joshuaproject.net/people_groups/17124/IN",
-//     "https://joshuaproject.net/people_groups/12795/KN",
-//     "https://joshuaproject.net/people_groups/17379/IN",
-//     "https://joshuaproject.net/people_groups/17599/IN",
-//     "https://joshuaproject.net/people_groups/17452/IN",
-//     "https://joshuaproject.net/people_groups/14256/PK",
-//     "https://joshuaproject.net/people_groups/18045/IN",
-//     "https://joshuaproject.net/people_groups/18084/IN",
-//     "https://joshuaproject.net/people_groups/22311/BG",
-//     "https://joshuaproject.net/people_groups/12666/TH",
-//     "https://joshuaproject.net/people_groups/18293/IN",
-//   ],
-// ];
-
 const Countries = [
   [
     "North Korea",
@@ -1298,14 +1028,20 @@ function App() {
             <PGSection
               pg1={
                 new PG(
-                  PeopNameInCountry[week - 1],
-                  PGLinkBase + PeopleID3[week * 2] + "/" + ROG3[pair * week * 2]
+                  PeopNameInCountry[16 * (week - 1)],
+                  PGLinkBase +
+                    PeopleID3[16 * (week - 1)] +
+                    "/" +
+                    ROG3[16 * (week - 1)]
                 )
               }
               pg2={
                 new PG(
-                  PeopNameInCountry[pair * week * 2 + 1],
-                  PGLinkBase + PeopleID3[pair * week * 2 + 1] + "/" + ROG3[pair * week * 2 + 1]
+                  PeopNameInCountry[16 * (week - 1) + 8],
+                  PGLinkBase +
+                    PeopleID3[16 * (week - 1) + 8] +
+                    "/" +
+                    ROG3[16 * (week - 1) + 8]
                 )
               }
             />
@@ -1339,14 +1075,20 @@ function App() {
             <PGSection
               pg1={
                 new PG(
-                  PeopNameInCountry[pair * week - 1],
-                  PGLinkBase + PeopleID3[pair * week - 1] + "/" + ROG3[pair * week - 1]
+                  PeopNameInCountry[pair + 16 * (week - 1) - 1],
+                  PGLinkBase +
+                    PeopleID3[pair + 16 * (week - 1) - 1] +
+                    "/" +
+                    ROG3[pair + 16 * (week - 1) - 1]
                 )
               }
               pg2={
                 new PG(
-                  PeopNameInCountry[pair * week * 2],
-                  PGLinkBase + PeopleID3[pair * week * 2] + "/" + ROG3[pair * week * 2]
+                  PeopNameInCountry[pair + 16 * (week - 1) + 7],
+                  PGLinkBase +
+                    PeopleID3[pair + 16 * (week - 1) + 7] +
+                    "/" +
+                    ROG3[pair + 16 * (week - 1) + 7]
                 )
               }
             />
