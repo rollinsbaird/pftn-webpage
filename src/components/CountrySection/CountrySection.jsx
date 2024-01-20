@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function CountrySection({ Name, Link }) {
   return (
     <h3>
-      Please pray for <a href={Link}>{Name}</a> this week.
+      Please pray for <a href={Link} target="_blank" rel="noopener noreferrer">{Name}</a> this week.
     </h3>
   );
 }
