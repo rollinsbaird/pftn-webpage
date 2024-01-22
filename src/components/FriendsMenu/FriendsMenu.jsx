@@ -1,12 +1,23 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
-function FriendsMenu({ friend }) {
+const Friends = [
+  "the Woodalls and LeeLee",
+  "Hunter & Meghan and Allison & Drew",
+  "Peyton Alexander and Meg & Thomas",
+  "Rod & Tori and Ian & Nora",
+  "Erica Patrick",
+  "Chloe",
+  "Brett & Meghan",
+  "Bethany Derby",
+];
+
+function FriendsMenu({ pair = 0 }) {
+  var friend = Friends[pair - 1];
+
   return (
     <>
       <h2>Workers</h2>
-      <h3>
-        Please lift up {friend}.
-      </h3>
+      <h3>Please lift up {friend}.</h3>
       <p>
         O God, you desire that all people be saved and come to knowledge of the
         truth: Prosper all those who live, preach, and teach the Gospel at home
@@ -21,7 +32,7 @@ function FriendsMenu({ friend }) {
 }
 
 FriendsMenu.propTypes = {
-  friend: PropTypes.string,
+  pair: PropTypes.number,
 };
 
 export default FriendsMenu;
