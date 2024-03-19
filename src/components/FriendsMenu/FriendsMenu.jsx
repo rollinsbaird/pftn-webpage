@@ -8,7 +8,7 @@ const Friends = [
   "Erica Patrick",
   "Chloe",
   "Brett & Meghan",
-  "Bethany Derby",
+  "Bethany & Derby",
 ];
 
 function FriendsMenu({ pair = 0 }) {
