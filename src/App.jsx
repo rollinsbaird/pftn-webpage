@@ -69,7 +69,7 @@ const Countries = [
 function App() {
   const [cookies, setCookie] = useCookies(["pair"]);
   const [pair, setPair] = useState(cookies.pair);
-  const [week, setWeek] = useState(calcWeek());
+  const [week, setWeek] = useState(4);
 
   useEffect(() => {
     setCookie("pair", pair);
